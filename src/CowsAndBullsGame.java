@@ -48,13 +48,18 @@ public class CowsAndBullsGame {
 		{
 			playerInput = s.nextLine();
 			playerNumber = Integer.parseInt(playerInput);
+			
 			char[] playerCharInput = playerInput.toCharArray();
+			
 			if (playerNumber != computerNumber)
 			{
 				boolean[] bulls = new boolean[4];
+				
 				int foundBulls = 0;
 				int foundCows = 0;
+				
 				// Checking for bulls
+				
 				for (int i = 0; i <= 3; i ++)
 				{
 					if (playerCharInput[i] == (char)(digits[i] + '0'))
