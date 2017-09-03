@@ -59,11 +59,12 @@ public class patternfinder {
 			{
 				
 				currentlength = firstletter;
-				for (int o = i; o < k.length; o ++)
+				for (int o = i; o < k.length - 1; o ++)
 				{
 					
 					if (k[o] == pattern[currentlength] || pattern[currentlength] == '?') // Checking if the pattern continues
 					{
+						
 						currentlength ++;
 					}
 					else if(pattern[currentlength] == '*') // 2 cases if the symbol is a *
