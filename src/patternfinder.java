@@ -68,9 +68,9 @@ public class patternfinder {
 				{
 					goal = k.length;
 				}
-				//System.out.println(pattern[firstletter] + " " + currentlength + " " + patternlength);
 				for (int o = i; o < goal; o ++)
 				{
+					
 					//System.out.println(currentlength);
 					if (k[o] == pattern[currentlength] || pattern[currentlength] == '?') // Checking if the pattern continues
 					{
@@ -114,7 +114,7 @@ public class patternfinder {
 					{
 						break;
 					}
-					if (currentlength + 1>= patternlength)
+					if (currentlength + 1 >= patternlength)
 					{
 						complete = true;
 						break;

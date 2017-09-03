@@ -37,9 +37,9 @@ public class CowsAndBullsGame {
 			{
 				
 				
-				int[] answer = counter.detect(playerCharInput, digits, digits.length);
+				result answer = counter.detect(playerCharInput, digits, digits.length);
 				
-				System.out.println("Bulls: " + answer[0] + " Cows: " + answer[1]);
+				System.out.println("Bulls: " + answer.returnfirstparameter() + " Cows: " + answer.returnsecondparameter());
 			}
 			else
 			{

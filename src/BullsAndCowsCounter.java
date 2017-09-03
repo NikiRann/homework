@@ -1,8 +1,8 @@
 
 public class BullsAndCowsCounter {
-	public int[] detect (char[] num1, int[] num2,int length)
+	public result detect (char[] num1, int[] num2,int length)
 	{
-		int answer[] = new int[2];
+		
 		
 		boolean[] bulls = new boolean[length];
 		
@@ -37,8 +37,7 @@ public class BullsAndCowsCounter {
 				}
 			}
 		}
-		answer[0] = foundBulls;
-		answer[1] = foundCows;
+		result answer = new result(foundBulls, foundCows);
 		return answer;
 	}
 }
