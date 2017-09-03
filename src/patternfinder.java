@@ -53,15 +53,25 @@ public class patternfinder {
 			}
 		}
 		if (patternlength <= k.length) {
-		for (int i = 0; i < k.length; i ++)
+		for (int i = 0; i <= k.length - 1; i ++)
 		{
 			if (k[i] == pattern[firstletter]) // Checking if we found the pattern start
 			{
 				
 				currentlength = firstletter;
-				for (int o = i; o < k.length - 1; o ++)
+				int goal;
+				if (i != k.length - 1)
 				{
-					
+					goal = k.length - 1;
+				}
+				else
+				{
+					goal = k.length;
+				}
+				//System.out.println(pattern[firstletter] + " " + currentlength + " " + patternlength);
+				for (int o = i; o < goal; o ++)
+				{
+					//System.out.println(currentlength);
 					if (k[o] == pattern[currentlength] || pattern[currentlength] == '?') // Checking if the pattern continues
 					{
 						
@@ -104,7 +114,7 @@ public class patternfinder {
 					{
 						break;
 					}
-					if (currentlength + 1 >= patternlength)
+					if (currentlength + 1>= patternlength)
 					{
 						complete = true;
 						break;
