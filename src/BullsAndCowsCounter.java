@@ -1,6 +1,6 @@
 
 public class BullsAndCowsCounter {
-	public result detect (char[] num1, int[] num2,int length)
+	public result detect (char[] num1, int[] num2, int length)
 	{
 		
 		
@@ -9,26 +9,14 @@ public class BullsAndCowsCounter {
 		int foundBulls = 0;
 		int foundCows = 0;
 		
-		// Checking for bulls
+		// Checking for bulls and cows
 		
-		for (int i = 0; i <= 3; i ++)
+		for (int i = 0; i <= length; i ++)
 		{
-			if (num1[i] == (char)(num2[i] + '0'))
+			
+			if (num1[i] != (char)(num2[i] + '0'))
 			{
-				bulls[i] = true;
-				foundBulls ++;
-			}
-		}
-		
-		// Checking for cows
-		
-		for (int i = 0; i <= 3; i ++)
-		{
-			// Checking if there was a bull on this integer
-			if (bulls[i] != true)
-			{
-				
-				for (int o = 0; o <= 3; o ++)
+				for (int o = 0; o <= length; o ++)
 				{
 					if (num1[i] == (char)(num2[o] + '0'))
 					{
@@ -36,7 +24,12 @@ public class BullsAndCowsCounter {
 					}
 				}
 			}
+			else
+			{
+				foundBulls ++;
+			}
 		}
+		
 		result answer = new result(foundBulls, foundCows);
 		return answer;
 	}
